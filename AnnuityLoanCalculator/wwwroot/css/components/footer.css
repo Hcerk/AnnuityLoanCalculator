@@ -1,0 +1,12 @@
+footer {
+  min-height: var(--sp-min-footer);
+  box-shadow: var(--shadow-up);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container {
+  font-size: 18px;
+}

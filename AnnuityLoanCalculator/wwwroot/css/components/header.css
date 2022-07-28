@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  min-height: var(--sp-min-header);
+
+  box-shadow: var(--shadow-down);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-title {
+  color: var(--black);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-title:focus,
+.navbar-title:hover {
+  color: var(--black);
+}

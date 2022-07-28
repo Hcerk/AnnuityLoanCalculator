@@ -1,0 +1,9 @@
+:root {
+  --sp-min-header: 80px;
+  --sp-min-footer: 55px;
+
+  --sp-min-main: calc(100vh - var(--sp-min-header) - var(--sp-min-footer));
+
+  --br: 12px;
+  --br-img-item-product: var(--br);
+}

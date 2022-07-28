@@ -1,0 +1,56 @@
+﻿@model TableModel
+
+@{
+    ViewData["Title"] = "Результат расчёта";
+}
+
+
+<div class="result">
+    <div class="result-table">
+        <div class="result-table-row">
+            @foreach (var keys in new Dictionary<string, string>(){
+             { "number", "№" }, { "date", "Дата платежа" }, { "amount", "Сумма платежа" },
+             { "principal-debt", "Основной долг" }, { "percentages", "Проценты" }, { "remaining-debt", "Остаток долга" }
+         })
+            {
+                <div class="result-table-column header @(keys.Key)">
+                    @(keys.Value)
+                </div>
+            }
+        </div>
+        @foreach (RowResultModel row in Model.Rows)
+        {
+            <div class="result-table-row">
+                <div class="result-table-column number">
+                    @row.Id
+                </div>
+                <div class="result-table-column date">
+                    @row.Date
+                </div>
+                <div class="result-table-column amount">
+                    @string.Format(new CultureInfo("en-US"), "{0:N2}", row.PaymentAmount).Replace(",", " ")
+                </div>
+                <div class="result-table-column principal-debt">
+                    @string.Format(new CultureInfo("en-US"), "{0:N2}", row.PrincipalDebt).Replace(",", " ")
+                </div>
+                <div class="result-table-column percentages">
+                    @string.Format(new CultureInfo("en-US"), "{0:N2}", row.Percent).Replace(",", " ")
+                </div>
+                <div class="result-table-column remaining-debt">
+                    @string.Format(new CultureInfo("en-US"), "{0:N2}", row.RemainingDebt).Replace(",", " ")
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="result-data">
+        <div class="result-data-body">
+            <div class="result-data-title">
+                Переплата по кредиту
+            </div>
+            <div class="result-data-value">
+                @string.Format(new CultureInfo("en-US"), "{0:N2}", Model.OverpaymentLoan).Replace(",", " ")
+            </div>
+        </div>
+    </div>
+</div>

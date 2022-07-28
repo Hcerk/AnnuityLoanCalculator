@@ -1,0 +1,245 @@
+:root {
+  --c-white: rgb(255 255 255);
+  --c-black: rgb(0 0 0);
+  --c-transparent: rgba(0 0 0 / 0%);
+
+  --c-border-900: rgba(6 40 61 / 30%);
+
+  --c-blue-50: rgb(13 110 253);
+  --c-blue-500: rgb(88 154 252);
+
+  --c-red-100: rgb(255 182 193);
+  --c-red-200: rgb(229 55 73);
+  --c-red-400: rgb(220 53 69);
+  --c-red-600: rgb(140 21 21);
+
+  --c-green-100: rgb(211 235 205);
+  --c-green-200: rgb(163 207 187);
+  --c-green-500: rgb(25 135 84);
+  --c-green-600: rgb(21 140 87);
+
+  --c-grey-150: rgb(243 243 243);
+  --c-grey-250: rgb(226 226 226);
+  --c-grey-280: rgb(219 219 219);
+  --c-grey-300: rgb(224 224 224);
+  --c-grey-400: rgb(185 185 185);
+  --c-grey-500: rgb(145 145 145);
+  --c-grey-600: rgb(117 117 117);
+  --c-grey-700: rgb(97 97 97);
+  --c-grey-800: rgb(55 55 55);
+  --c-grey-850: rgb(45 45 45);
+  --c-grey-900: rgb(33 33 33);
+
+  --c-indigo-900: rgb(26 35 126);
+}
+
+body.light {
+  --bg-border: var(--c-grey-400);
+
+  --shadow-up: 0 -5px 20px 0 rgb(0 0 0 / 7%);
+  --shadow-center: 0 0px 35px 0 rgb(0 0 0 / 12%);
+  --shadow-down: 0 5px 20px 0 rgb(0 0 0 / 7%);
+
+  --bg-table-header: var(--c-grey-150);
+}
+
+body.dark {
+}
+
+
+:root {
+  --sp-min-header: 80px;
+  --sp-min-footer: 55px;
+
+  --sp-min-main: calc(100vh - var(--sp-min-header) - var(--sp-min-footer));
+
+  --br: 12px;
+  --br-img-item-product: var(--br);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  padding: 0px;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 5px;
+  background-color: rgb(220 219 219);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0 0 0);
+  border-radius: 1px;
+}
+
+footer {
+  min-height: var(--sp-min-footer);
+  box-shadow: var(--shadow-up);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container {
+  font-size: 18px;
+}
+
+header {
+  width: 100%;
+  min-height: var(--sp-min-header);
+
+  box-shadow: var(--shadow-down);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-title {
+  color: var(--black);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-title:focus,
+.navbar-title:hover {
+  color: var(--black);
+}
+
+main {
+  min-height: var(--sp-min-main);
+  padding: 8px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-data-container {
+  padding: 14px 18px;
+  width: 450px;
+
+  box-shadow: var(--shadow-center);
+  border-radius: var(--br);
+}
+
+.form-data,
+.form-data-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-data-input-container {
+  gap: 8px;
+}
+
+.form-data-checked-container {
+  padding: 0px auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-data-input-body,
+.form-data-input-btn {
+  width: 100%;
+}
+
+.result {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-table {
+  max-height: 550px;
+  overflow: auto;
+}
+
+.result-table,
+.result-data {
+  border: 1px solid var(--bg-border);
+  box-shadow: var(--shadow-center);
+}
+
+.result-table-row {
+  display: flex;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+.result-table-row:last-child {
+  border-bottom: unset;
+}
+
+.result-table-column {
+  height: 40px;
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--bg-border);
+}
+
+.result-table-row .result-table-column:last-child {
+  border-right: unset;
+}
+
+.result-table-column.header {
+  height: 50px;
+  background-color: var(--bg-table-header);
+}
+
+.result-table-column.number {
+  width: 65px;
+}
+
+.result-table-column.date {
+  width: 200px;
+}
+
+.result-table-column.amount,
+.result-table-column.principal-debt,
+.result-table-column.percentages {
+  width: 140px;
+}
+
+.result-table-column.remaining-debt {
+  width: 220px;
+}
+
+.result-data {
+  /* padding: 12px 0px 12px 16px; */
+}
+
+.result-data-body {
+  display: flex;
+  gap: 8px;
+}
+
+.result-data-title {
+  background-color: var(--bg-table-header);
+  padding: 12px 16px;
+}
+
+.result-data-title::after {
+  content: ":";
+}
+
+.result-data-value {
+  padding: 12px 16px 12px 0px;
+}

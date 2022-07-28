@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnuityLoanCalculator", "AnnuityLoanCalculator\AnnuityLoanCalculator.csproj", "{769B9F58-A6A9-4B75-A04A-BE7A7A33F439}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{769B9F58-A6A9-4B75-A04A-BE7A7A33F439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769B9F58-A6A9-4B75-A04A-BE7A7A33F439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769B9F58-A6A9-4B75-A04A-BE7A7A33F439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769B9F58-A6A9-4B75-A04A-BE7A7A33F439}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10F29CEC-B82D-4E69-A256-FF8DE56B71E5}
+	EndGlobalSection
+EndGlobal

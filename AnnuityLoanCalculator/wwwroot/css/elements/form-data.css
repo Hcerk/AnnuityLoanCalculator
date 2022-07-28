@@ -1,0 +1,32 @@
+.form-data-container {
+  padding: 14px 18px;
+  width: 450px;
+
+  box-shadow: var(--shadow-center);
+  border-radius: var(--br);
+}
+
+.form-data,
+.form-data-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-data-input-container {
+  gap: 8px;
+}
+
+.form-data-checked-container {
+  padding: 0px auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-data-input-body,
+.form-data-input-btn {
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/js/j_output.js",
+    "inputFiles": [
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/1-bundles/index.css",
+    "inputFiles": [
+      "wwwroot/css/design-tokens/*.css",
+      "wwwroot/css/generic/*.css",
+      "wwwroot/css/components/*.css",
+      "wwwroot/css/elements/*.css"
+    ]
+  }
+]

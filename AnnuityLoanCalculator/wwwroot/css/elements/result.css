@@ -1,0 +1,85 @@
+.result {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-table {
+  max-height: 550px;
+  overflow: auto;
+}
+
+.result-table,
+.result-data {
+  border: 1px solid var(--bg-border);
+  box-shadow: var(--shadow-center);
+}
+
+.result-table-row {
+  display: flex;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+.result-table-row:last-child {
+  border-bottom: unset;
+}
+
+.result-table-column {
+  height: 40px;
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--bg-border);
+}
+
+.result-table-row .result-table-column:last-child {
+  border-right: unset;
+}
+
+.result-table-column.header {
+  height: 50px;
+  background-color: var(--bg-table-header);
+}
+
+.result-table-column.number {
+  width: 65px;
+}
+
+.result-table-column.date {
+  width: 200px;
+}
+
+.result-table-column.amount,
+.result-table-column.principal-debt,
+.result-table-column.percentages {
+  width: 140px;
+}
+
+.result-table-column.remaining-debt {
+  width: 220px;
+}
+
+.result-data {
+  /* padding: 12px 0px 12px 16px; */
+}
+
+.result-data-body {
+  display: flex;
+  gap: 8px;
+}
+
+.result-data-title {
+  background-color: var(--bg-table-header);
+  padding: 12px 16px;
+}
+
+.result-data-title::after {
+  content: ":";
+}
+
+.result-data-value {
+  padding: 12px 16px 12px 0px;
+}

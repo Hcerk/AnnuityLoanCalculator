@@ -1,0 +1,62 @@
+﻿@model CalculationModel
+
+@{
+    ViewData["Title"] = "Форма данных";
+}
+
+<div class="form-data-container">
+    <form class="form-data" asp-controller="Home" asp-action="Result">
+        <div class="form-data-input-container">
+            <div class="form-data-checked-container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="checkMonths"
+                           value="@CalculationType.Months" name="CalculationType"
+                           @(Model.CalculationType == CalculationType.Months ? "checked" : "")>
+                    <label class="form-check-label" for="checkMonths">В месяц</label>
+                </div>
+                <div class="form-checke">
+                    <input class="form-check-input" type="radio" id="checkDays"
+                           value="@CalculationType.Days" name="CalculationType"
+                           @(Model.CalculationType == CalculationType.Days ? "checked" : "")>
+                    <label class="form-check-label" for="checkDays">В днях</label>
+                </div>
+            </div>
+            <div class="form-floating form-data-input-body">
+                <input type="number" class="form-control" id="frm_loan_amount" placeholder="35000"
+                       asp-for="LoanAmmount"
+                       min="0" maxlength="32" required>
+                <label for="frm_loan_amount">Сумма займа*</label>
+                <div class="invalid-feedback"> Сумма займа, указана неверно </div>
+                <span asp-validation-for="LoanAmmount" class="text-danger"></span>
+            </div>
+            <div class="form-floating form-data-input-body">
+                <input type="number" class="form-control" id="frm_loan_term" placeholder="35000"
+                       asp-for="LoanTerm"
+                       min="0" maxlength="32" required>
+                <label for="frm_loan_term">Срок займа (в месяцах)*</label>
+                <div class="invalid-feedback"> Срок займ, указана неверно </div>
+                <span asp-validation-for="LoanTerm" class="text-danger"></span>
+            </div>
+            <div class="form-floating form-data-input-body">
+                <input type="number" class="form-control" id="frm_rate_year" placeholder="35000"
+                       asp-for="RateYear"
+                       min="0" maxlength="32" required>
+                <label for="frm_rate_year">Ставка (в год)*</label>
+                <div class="invalid-feedback"> Ставка, указана неверно </div>
+                <span asp-validation-for="RateYear" class="text-danger"></span>
+            </div>
+            <div id="payment_step_parent" class="form-floating form-data-input-body" hidden>
+                <input type="number" class="form-control" id="frm_payment_step" placeholder="2"
+                       asp-for="PaymentStep"
+                       min="0" maxlength="32" required>
+                <label for="frm_payment_step">Шаг платежа (в днях)*</label>
+                <div class="invalid-feedback"> Шаг платежа, указан неверно </div>
+                <span asp-validation-for="PaymentStep" class="text-danger"></span>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-success form-data-input-btn" type="submit">
+            Рассчитать
+        </button>
+    </form>
+</div>

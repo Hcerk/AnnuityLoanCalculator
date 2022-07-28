@@ -1,0 +1,23 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  padding: 0px;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 5px;
+  background-color: rgb(220 219 219);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0 0 0);
+  border-radius: 1px;
+}
